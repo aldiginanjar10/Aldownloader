@@ -1,26 +1,4 @@
 
-
-app.post("/download", async (req, res) => {
-  const { url } = req.body;
-
-  try {
-    // Contoh pakai API pihak ketiga
-    const response = await axios.get(
-      `https://api.tiklydown.me/api/download?url=${url}`
-    );
-
-    res.json(response.data);
-  } catch (error) {
-    res.status(500).json({ error: "Gagal mengambil video" });
-  }
-});
-
-app.listen(3000, () => {
-  console.log("Server jalan di http://localhost:3000");
-});<!DOCTYPE html>
-<html>
-<head>
-  <title>TikTok Downloader</title>
 </head>
 <body>
   <h2>TikTok Downloader</h2>
